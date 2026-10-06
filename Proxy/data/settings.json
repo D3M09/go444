@@ -1,0 +1,11 @@
+{
+    "platformName": "VoucherCenter",
+    "brandName": "BBC99",
+    "currency": "BDT",
+    "currencySymbol": "৳",
+    "timeZone": 6,
+    "language": "bn",
+    "isTest": false,
+    "favicon": "",
+    "logo": ""
+}

@@ -1,0 +1,49 @@
+# =============================================================================
+#  Root router -> Proxy reverse proxy
+#  Routes everything to Proxy/index.php so root-absolute asset/API paths
+#  (/res, /common, /wps, /lgw, ...) resolve even when the app lives in /Proxy/.
+# =============================================================================
+
+DirectorySlash On
+DirectoryIndex index.php
+
+# Add the trailing slash for the app folder (subdirectory installs)
+RedirectMatch 301 ^/Proxy$ /Proxy/
+
+# Expose the Authorization header to PHP (Apache strips it by default).
+CGIPassAuth On
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Preserve the Authorization header across internal rewrites
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Proxy app root (with or without trailing slash)
+    RewriteRule ^Proxy/?$ Proxy/index.php [L,QSA]
+
+    # Other requests inside the Proxy folder are handled by Proxy/.htaccess
+    RewriteCond %{REQUEST_URI} ^/Proxy(/|$)
+    RewriteRule ^ - [L]
+
+    # Local shortcut: /admin -> the proxy's hidden admin panel
+    RewriteRule ^admin(/.*)?$ Proxy/admin/index.php [L,QSA]
+
+    # Local shortcut: /setup -> the installer
+    RewriteRule ^setup(/.*)?$ Proxy/setup.php [L,QSA]
+
+    # Payment API endpoints
+    RewriteRule ^api/(.*)$ Proxy/api/$1 [L,QSA]
+
+    # Real files/directories (except the document root) are served as-is
+    RewriteCond %{REQUEST_URI} !=/
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else goes through the proxy
+    RewriteRule ^ Proxy/index.php [L,QSA]
+</IfModule>

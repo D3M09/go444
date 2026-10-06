@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#07130f">
+  <title>Login &#183; BBC99</title>
+  <link rel="stylesheet" href="/m/assets/app.css?v=20261004">
+  <link rel="icon" type="image/png" href="/m/assets/img/favicon.png">
+  <!-- upstream encryption used by /wps/session/login (window.reRsaV2) -->
+  <script src="/js/encrypt.js" defer></script>
+  <script src="/m/assets/config.js?v=20261004"></script>
+  <script src="/m/assets/api.js?v=20261006d" defer></script>
+  <script src="/m/assets/app.js?v=20261006b" defer></script>
+</head>
+<body class="auth" data-page="login">
+  <!-- Ambient backdrop: the reference design sits on a dark photo. We ship no
+       photo (no external asset is fetched by these pages), so the depth comes
+       from layered gradients that echo the same near-black green. -->
+  <div class="auth-bg" aria-hidden="true">
+    <span class="auth-bg__glow"></span>
+    <span class="auth-bg__vignette"></span>
+  </div>
+
+  <main class="auth-shell">
+    <a class="auth-back" href="/m/home" aria-label="Back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+
+    <div class="auth-lockup">
+      <img class="auth-logo" src="/m/assets/img/logo.png" alt="BBC99" width="153" height="46">
+    </div>
+
+    <h1 class="auth-title">Login</h1>
+    <p class="auth-switch">No account yet? <a href="/m/register">Register</a></p>
+
+    <form class="auth-form" id="login-form" novalidate>
+
+      <div class="pill">
+        <span class="pill__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5.2 3.5h3l1.6 4-2 1.4a12.6 12.6 0 0 0 6.3 6.3l1.4-2 4 1.6v3a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 3.2 5.7a2 2 0 0 1 2-2.2z"/></svg>
+        </span>
+        <span class="pill__lead">+880</span>
+        <input class="pill__input" id="login-mobile" name="mobile" type="tel" inputmode="numeric"
+               autocomplete="tel" placeholder="Phone number" required>
+      </div>
+
+      <div class="pill">
+        <span class="pill__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2"/><path d="M8.2 10.5V7.6a3.8 3.8 0 0 1 7.6 0v2.9"/></svg>
+        </span>
+        <input class="pill__input" id="login-password" name="password" type="password"
+               autocomplete="current-password" placeholder="Password" required>
+        <button class="pill__action" type="button" data-pw-toggle="login-password" aria-label="Show password">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.8 10-6.8S22 12 22 12s-3.6 6.8-10 6.8S2 12 2 12z"/><circle cx="12" cy="12" r="2.9"/></svg>
+        </button>
+      </div>
+
+      <!-- Upstream validates the code from /wps/captcha as the login payload's
+           `captcha` field (its own form names the input `identifying`), and the
+           image is bound to the captchaId cookie that endpoint sets. Tapping
+           the image fetches a fresh one. The reference design has no captcha,
+           but the backend makes it mandatory, so it takes one pill of its own. -->
+      <div class="pill pill--split">
+        <input class="pill__input" id="login-captcha" name="identifying" type="text"
+               inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"
+               maxlength="16" placeholder="Verification code" data-captcha-input required>
+        <button class="captcha-refresh" type="button" data-captcha-refresh aria-label="Load a new code" title="Tap for a new code">
+          <img data-captcha-img alt="Verification code">
+        </button>
+      </div>
+
+      <div class="auth-row">
+        <label class="auth-check">
+          <input type="checkbox" id="login-remember" checked>
+          <span>Remember</span>
+        </label>
+        <a class="auth-link" href="/m/forget">Forgot password?</a>
+      </div>
+
+      <button class="auth-btn" type="submit">Login</button>
+
+      <div class="auth-divider"><span>Or Connect With</span></div>
+
+      <!-- The reference design shows Facebook and Google circles. The upstream
+           only has a working Facebook login inside its native app (on the web
+           it answers "coming soon") and no Google login at all, so these are
+           shown for parity and say so when tapped rather than doing nothing. -->
+      <div class="auth-social">
+        <button class="soc soc--fb" type="button" data-social="Facebook" aria-label="Continue with Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8.1V14h2.4v7z"/></svg>
+        </button>
+        <button class="soc soc--gg" type="button" data-social="Google" aria-label="Continue with Google">
+          <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.6z"/><path fill="#34A853" d="M12 23.5c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.6-2-6.5-4.8H1.7v3a11.5 11.5 0 0 0 10.3 6.4z"/><path fill="#FBBC05" d="M5.5 14.1a6.9 6.9 0 0 1 0-4.4v-3H1.7a11.5 11.5 0 0 0 0 10.4z"/><path fill="#EA4335" d="M12 4.9c1.7 0 3.2.6 4.4 1.7l3.3-3.3A11.5 11.5 0 0 0 1.7 6.7l3.8 3a6.9 6.9 0 0 1 6.5-4.8z"/></svg>
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <div class="toast-wrap" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0b3b30">
+<title>Game · BBC99</title>
+<link rel="icon" href="/images/favicon.png?v=2">
+<style>
+  :root{--bg:#07231d;--bar:#0b3b30;--line:#12503f;--text:#f2f7f5;--muted:#9fb8b1;--gold:#ffcc22;--danger:#ff5a5a}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,"Noto Sans Bengali",Segoe UI,Roboto,Arial}
+  body{display:flex;flex-direction:column;overflow:hidden}
+
+  /* The bar is the one piece of chrome that must never scroll away: it carries
+     the Back button, which is the whole reason this page exists. */
+  .bar{flex:0 0 auto;display:flex;align-items:center;gap:10px;padding:8px 10px;
+       background:linear-gradient(180deg,#0e4638,#0b3b30);border-bottom:1px solid var(--line);
+       padding-top:calc(8px + env(safe-area-inset-top))}
+  .back{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px 0 10px;border:0;border-radius:10px;
+        background:rgba(255,255,255,.1);color:var(--text);font:inherit;font-weight:600;cursor:pointer}
+  .back:active{transform:scale(.97)}
+  .back svg{width:18px;height:18px}
+  .title{flex:1;min-width:0;font-weight:600;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--gold)}
+  .act{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border:0;border-radius:10px;
+       background:rgba(255,255,255,.1);color:var(--text);cursor:pointer}
+  .act svg{width:18px;height:18px}
+
+  .stage{position:relative;flex:1 1 auto;min-height:0;background:#041914}
+  iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#041914}
+
+  /* Cover, spinner and error share one overlay so nothing ever paints over the
+     game once it is running. */
+  .cover{position:absolute;inset:0;display:grid;place-items:center;background:var(--bg);z-index:2;text-align:center;padding:24px}
+  .cover[hidden]{display:none}
+  .spinner{width:46px;height:46px;border-radius:50%;border:3px solid rgba(255,204,34,.22);border-top-color:var(--gold);
+           animation:spin .9s linear infinite;margin:0 auto 14px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .cover p{margin:0;color:var(--muted)}
+  .err h2{margin:0 0 6px;font-size:17px;color:var(--text)}
+  .err p{max-width:340px;margin:0 auto 16px}
+  .err .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 18px;border-radius:11px;border:0;cursor:pointer;font:inherit;font-weight:600;
+       background:var(--gold);color:#231a00;text-decoration:none}
+  .btn.ghost{background:rgba(255,255,255,.12);color:var(--text)}
+  @media (prefers-reduced-motion:reduce){.spinner{animation-duration:1.6s}}
+</style>
+</head>
+<body>
+  <div class="bar">
+    <button class="back" id="btn-back" type="button" aria-label="Back to the site">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      <span>Back</span>
+    </button>
+    <div class="title" id="game-title">Loading game…</div>
+    <button class="act" id="btn-reload" type="button" aria-label="Reload game">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 10-2.3 5.7"/><path d="M20 5v6h-6"/></svg>
+    </button>
+  </div>
+
+  <div class="stage">
+    <iframe id="frame" title="Game" allow="autoplay; fullscreen; clipboard-write" referrerpolicy="no-referrer-when-downgrade" hidden></iframe>
+
+    <div class="cover" id="cover">
+      <div>
+        <div class="spinner" id="spin"></div>
+        <p id="cover-text">Opening the game…</p>
+      </div>
+    </div>
+  </div>
+
+<script src="/m/assets/config.js?v=20261004"></script>
+<script defer src="/m/assets/api.js?v=20261006d"></script>
+<script>
+(function () {
+  'use strict';
+  var q = new URLSearchParams(location.search);
+  var node   = q.get('node') || q.get('nodeId') || q.get('gameId') || '';
+  var vendor = q.get('vendor') || q.get('vassalage') || '';
+  var gtype  = q.get('gtype') || q.get('gameType') || '';
+  var label  = q.get('name') || '';
+
+  var frame   = document.getElementById('frame');
+  var cover   = document.getElementById('cover');
+  var coverTx = document.getElementById('cover-text');
+  var titleEl = document.getElementById('game-title');
+  var backBtn = document.getElementById('btn-back');
+
+  if (label) { titleEl.textContent = label; }
+
+  /* ---------- where Back goes ----------
+     Returning to the page the player came from is what a back button means, so
+     that is preferred when the referrer is this same site. A direct hit (link,
+     bookmark, or a refresh) has nowhere to go back to, and the configured
+     target is used instead — it is always a path on this site (the server
+     normalises it), so Back can never leave the brand. */
+  function backTarget() {
+    var s = (window.PXAPI && PXAPI.gameSettings) || {};
+    return s.back_url || '/m/home';
+  }
+  function goBack() {
+    var ref = document.referrer || '';
+    var sameOrigin = ref && ref.indexOf(location.origin) === 0 && history.length > 1;
+    if (sameOrigin) { history.back(); return; }
+    location.replace(backTarget());
+  }
+  backBtn.addEventListener('click', goBack);
+
+  document.getElementById('btn-reload').addEventListener('click', function () {
+    if (frame.getAttribute('src')) { frame.src = frame.getAttribute('src'); }
+    else { start(); }
+  });
+
+  function fail(message) {
+    cover.hidden = false;
+    cover.className = 'cover err';
+    cover.innerHTML =
+      '<div>' +
+        '<h2>Game did not open</h2>' +
+        '<p>' + (message || 'The game could not be started. Please try again.') + '</p>' +
+        '<div class="row">' +
+          '<button class="btn" type="button" id="err-retry">Try again</button>' +
+          '<button class="btn ghost" type="button" id="err-back">Back</button>' +
+        '</div>' +
+      '</div>';
+    var r = document.getElementById('err-retry');
+    var b = document.getElementById('err-back');
+    if (r) r.addEventListener('click', function () {
+      cover.hidden = false; cover.className = 'cover';
+      cover.innerHTML = '<div><div class="spinner"></div><p>Opening the game…</p></div>';
+      start();
+    });
+    if (b) b.addEventListener('click', goBack);
+  }
+
+  function show(url) {
+    cover.hidden = true;
+    frame.hidden = false;
+    frame.src = url;
+  }
+
+  var started = false;
+
+  /* A gateway/upstream hiccup must not read as a broken game. Retrying a 5xx is
+     safe - the backend only answers one when it never got as far as opening a
+     round - while a business refusal (a round already open, maintenance, no
+     session) is reported as-is, because retrying it would just repeat itself. */
+  function isTransient(err) {
+    var s = err && err.status;
+    return !s || s >= 500;
+  }
+
+  function attempt(n) {
+    return PXAPI.launchGame({
+      gameType: gtype,
+      vassalage: vendor,
+      gameId: node,
+      nodeId: node,
+      platform: 'html5'
+    }).then(function (res) {
+      var url = PXAPI.gameUrl ? PXAPI.gameUrl(res) : '';
+      if (!url || !/^https?:\/\//i.test(url)) {
+        var e = new Error('The game service did not return a playable link.');
+        throw e;
+      }
+      return url;
+    }).catch(function (err) {
+      if (n < 3 && isTransient(err)) {
+        cover.hidden = false;
+        cover.className = 'cover';
+        cover.innerHTML = '<div><div class="spinner"></div><p>Opening the game… (retry ' + n + ')</p></div>';
+        return new Promise(function (resolve) {
+          setTimeout(resolve, 600 * n);
+        }).then(function () { return attempt(n + 1); });
+      }
+      throw err;
+    });
+  }
+
+  function start() {
+    if (!node) { fail('No game was selected.'); return; }
+    if (!window.PXAPI || !PXAPI.launchGame) { fail('Could not reach the game service.'); return; }
+    started = true;
+    attempt(1).then(show).catch(function (err) {
+      fail((err && err.message) || 'The game could not be started. Please try again.');
+    });
+  }
+
+  /* A frame that never fires load is usually a vendor that refuses to be framed;
+     offer the way out instead of leaving the player staring at a void. Once the
+     frame has loaded the notice must never appear - a slow game is not a broken
+     one. */
+  var loaded = false;
+  function armWatchdog() {
+    setTimeout(function () {
+      if (loaded || !started || !frame.getAttribute('src')) { return; }
+      cover.hidden = false;
+      cover.className = 'cover err';
+      cover.innerHTML =
+        '<div><h2>Taking longer than usual</h2>' +
+        '<p id="slow-text">The game has not finished loading.</p>' +
+        '<div class="row">' +
+          '<button class="btn" type="button" id="slow-back">Back</button>' +
+        '</div></div>';
+      var sb = document.getElementById('slow-back');
+      if (sb) sb.addEventListener('click', goBack);
+    }, 12000);
+  }
+  frame.addEventListener('load', function () {
+    if (frame.getAttribute('src')) { loaded = true; cover.hidden = true; }
+  });
+
+  /* api.js is loaded with defer, so it is not on the page yet while this script
+     is being parsed. A deferred script runs before DOMContentLoaded, which makes
+     that the earliest safe moment to start - otherwise PXAPI is undefined and
+     every launch reports the game service as unreachable. */
+  function ready() { start(); armWatchdog(); }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', ready); }
+  else { ready(); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+# Reverse proxy front controller.
+DirectorySlash Off
+DirectoryIndex index.php index.html
+Options -Indexes
+
+# Expose the Authorization header to PHP (Apache strips it by default).
+CGIPassAuth On
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+# Admin internals must never be fetched directly.
+<FilesMatch "^(config|panel)\.php$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Protect includes directory.
+<Directory "admin/includes">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</Directory>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Preserve the Authorization header across internal rewrites
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Hidden admin panel: every /admin path goes to its front controller
+    RewriteRule ^admin$ admin/index.php [L,QSA]
+    RewriteRule ^admin/(.*)$ admin/index.php [L,QSA]
+
+    # Setup installer
+    RewriteRule ^setup/?$ setup.php [L,QSA]
+    RewriteRule ^setup/(.*)$ setup.php [L,QSA]
+
+    # Payment API endpoints
+    RewriteRule ^api/(.*)$ api/$1 [L,QSA]
+
+    # Proxy root (with or without trailing slash)
+    RewriteRule ^$ index.php [L]
+
+    # Static VoucherCenter page (with or without trailing slash)
+    RewriteRule ^VoucherCenter/?$ VoucherCenter/index.html [L]
+
+    # Serve real files/directories as-is
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else goes through the proxy
+    RewriteRule ^ index.php [L,QSA]
+</IfModule>

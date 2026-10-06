@@ -1,0 +1,425 @@
+{
+    "at": 1791312091,
+    "list": [
+        {
+            "code": "2J",
+            "name": "2J GAMES",
+            "type": "FISH"
+        },
+        {
+            "code": "5G",
+            "name": "5G",
+            "type": "RNG"
+        },
+        {
+            "code": "U9W",
+            "name": "9wickets",
+            "type": "SPORTS"
+        },
+        {
+            "code": "AA",
+            "name": "Amazing Art Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "AE",
+            "name": "Ameba Entertainment",
+            "type": "RNG"
+        },
+        {
+            "code": "AMG",
+            "name": "Amigo Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "AMBS",
+            "name": "Askmeslot",
+            "type": "FISH"
+        },
+        {
+            "code": "AUX",
+            "name": "AVATAR UX",
+            "type": "RNG"
+        },
+        {
+            "code": "AVT",
+            "name": "Aviator",
+            "type": "RNG"
+        },
+        {
+            "code": "BSP",
+            "name": "Baison Poker",
+            "type": "FISH"
+        },
+        {
+            "code": "BBR",
+            "name": "Barbara",
+            "type": "RNG"
+        },
+        {
+            "code": "BGA",
+            "name": "BGaming",
+            "type": "RNG"
+        },
+        {
+            "code": "BTG",
+            "name": "Big Time Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "BNG",
+            "name": "BNG",
+            "type": "RNG"
+        },
+        {
+            "code": "BOM",
+            "name": "BoomingGames",
+            "type": "RNG"
+        },
+        {
+            "code": "BT",
+            "name": "BTGaming",
+            "type": "FISH"
+        },
+        {
+            "code": "BTI",
+            "name": "BTi",
+            "type": "SPORTS"
+        },
+        {
+            "code": "CG",
+            "name": "Caleta Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "CQ9",
+            "name": "CQ9",
+            "type": "FISH"
+        },
+        {
+            "code": "DG",
+            "name": "DG",
+            "type": "LIVE"
+        },
+        {
+            "code": "EGT",
+            "name": "Euro Games Technology Digital",
+            "type": "RNG"
+        },
+        {
+            "code": "EG4",
+            "name": "Evolution",
+            "type": "LIVE"
+        },
+        {
+            "code": "EP",
+            "name": "Evoplay",
+            "type": "RNG"
+        },
+        {
+            "code": "EZ",
+            "name": "Ezugi",
+            "type": "LIVE"
+        },
+        {
+            "code": "FC",
+            "name": "FA CHAI Gaming",
+            "type": "FISH"
+        },
+        {
+            "code": "FS",
+            "name": "Fastspin",
+            "type": "FISH"
+        },
+        {
+            "code": "FB",
+            "name": "FB SPORTS",
+            "type": "SPORTS"
+        },
+        {
+            "code": "FP",
+            "name": "First Person",
+            "type": "RNG"
+        },
+        {
+            "code": "FTG",
+            "name": "FunTa Gaming",
+            "type": "FISH"
+        },
+        {
+            "code": "GM",
+            "name": "Gemini",
+            "type": "RNG"
+        },
+        {
+            "code": "GPI",
+            "name": "GPI",
+            "type": "RNG"
+        },
+        {
+            "code": "HS",
+            "name": "Hacksaw Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "IA",
+            "name": "IA",
+            "type": "SPORTS"
+        },
+        {
+            "code": "ID",
+            "name": "Ideal Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "IO",
+            "name": "InOut",
+            "type": "RNG"
+        },
+        {
+            "code": "JDB",
+            "name": "JDB",
+            "type": "FISH"
+        },
+        {
+            "code": "JL",
+            "name": "Jili",
+            "type": "FISH"
+        },
+        {
+            "code": "JK",
+            "name": "Joker",
+            "type": "FISH"
+        },
+        {
+            "code": "KA",
+            "name": "KA Gaming",
+            "type": "FISH"
+        },
+        {
+            "code": "KM",
+            "name": "KingMidas",
+            "type": "PVP"
+        },
+        {
+            "code": "KP",
+            "name": "Kings Poker",
+            "type": "PVP"
+        },
+        {
+            "code": "L22",
+            "name": "Live22",
+            "type": "RNG"
+        },
+        {
+            "code": "LUC",
+            "name": "LuckySports",
+            "type": "SPORTS"
+        },
+        {
+            "code": "MAHA",
+            "name": "MAHA Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "MAS",
+            "name": "MAS",
+            "type": "RNG"
+        },
+        {
+            "code": "MA",
+            "name": "Mega Entertainment",
+            "type": "RNG"
+        },
+        {
+            "code": "MW",
+            "name": "Mega Win",
+            "type": "FISH"
+        },
+        {
+            "code": "MG",
+            "name": "Micro Gaming",
+            "type": "FISH"
+        },
+        {
+            "code": "NG",
+            "name": "Naga Games",
+            "type": "RNG"
+        },
+        {
+            "code": "NE",
+            "name": "NetEnt",
+            "type": "RNG"
+        },
+        {
+            "code": "NS",
+            "name": "Nextspin",
+            "type": "RNG"
+        },
+        {
+            "code": "NLC",
+            "name": "No Limit City",
+            "type": "RNG"
+        },
+        {
+            "code": "OCT",
+            "name": "Octoplay",
+            "type": "RNG"
+        },
+        {
+            "code": "PAS",
+            "name": "Pascal Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "PS",
+            "name": "PLAYSTAR",
+            "type": "RNG"
+        },
+        {
+            "code": "PT",
+            "name": "Playtech",
+            "type": "LIVE"
+        },
+        {
+            "code": "PG",
+            "name": "Pocket Games Soft",
+            "type": "RNG"
+        },
+        {
+            "code": "POLY",
+            "name": "Poly Sports",
+            "type": "SPORTS"
+        },
+        {
+            "code": "PP",
+            "name": "PP",
+            "type": "LIVE"
+        },
+        {
+            "code": "RCB",
+            "name": "RCB988 Horsebook",
+            "type": "SPORTS"
+        },
+        {
+            "code": "RT",
+            "name": "Red Tiger",
+            "type": "RNG"
+        },
+        {
+            "code": "RLX",
+            "name": "Relax Gaming",
+            "type": "RNG"
+        },
+        {
+            "code": "RG",
+            "name": "RGSlot",
+            "type": "PVP"
+        },
+        {
+            "code": "RP",
+            "name": "Rich Paradise",
+            "type": "RNG"
+        },
+        {
+            "code": "R88",
+            "name": "RiCH88",
+            "type": "RNG"
+        },
+        {
+            "code": "SA",
+            "name": "SA",
+            "type": "LIVE"
+        },
+        {
+            "code": "SB",
+            "name": "Saba Sports",
+            "type": "SPORTS"
+        },
+        {
+            "code": "SEX",
+            "name": "SEXY CASINO",
+            "type": "LIVE"
+        },
+        {
+            "code": "SS",
+            "name": "Smartsoft",
+            "type": "RNG"
+        },
+        {
+            "code": "SG",
+            "name": "Spadegaming",
+            "type": "FISH"
+        },
+        {
+            "code": "SPB",
+            "name": "Spribe",
+            "type": "RNG"
+        },
+        {
+            "code": "SV3",
+            "name": "SV388",
+            "type": "SPORTS"
+        },
+        {
+            "code": "SWG",
+            "name": "SWGaming",
+            "type": "FISH"
+        },
+        {
+            "code": "TCG_SEA",
+            "name": "TCG Sea Lottery",
+            "type": "ELOTT"
+        },
+        {
+            "code": "TF",
+            "name": "TF",
+            "type": "SPORTS"
+        },
+        {
+            "code": "TPG",
+            "name": "Triple Profits Games",
+            "type": "RNG"
+        },
+        {
+            "code": "TB",
+            "name": "Turbo Games",
+            "type": "RNG"
+        },
+        {
+            "code": "VIA",
+            "name": "ViA CASINO",
+            "type": "LIVE"
+        },
+        {
+            "code": "VA",
+            "name": "Victory Ark",
+            "type": "RNG"
+        },
+        {
+            "code": "WJ",
+            "name": "W Casino",
+            "type": "LIVE"
+        },
+        {
+            "code": "WD",
+            "name": "Wazdan",
+            "type": "RNG"
+        },
+        {
+            "code": "WS",
+            "name": "WinSLOT",
+            "type": "RNG"
+        },
+        {
+            "code": "YB",
+            "name": "YELLOW BAT",
+            "type": "RNG"
+        },
+        {
+            "code": "YGD",
+            "name": "Yggdrasil",
+            "type": "RNG"
+        }
+    ]
+}

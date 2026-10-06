@@ -1,0 +1,7 @@
+# API directory - allow PHP execution, deny directory listing.
+Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !\.php$
+    RewriteRule ^ - [R=404,L]
+</IfModule>

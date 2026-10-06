@@ -1,0 +1,291 @@
+{
+    "banners": [],
+    "marquee": {
+        "enabled": false,
+        "items": [],
+        "text": "",
+        "bg": "#111827",
+        "color": "#ffffff",
+        "speed": 20,
+        "link": ""
+    },
+    "titles": {
+        "web_title": "BBC99-প্রতি সফল রেফারে ৳300 বোনাস",
+        "mobile_title": "BBC99-প্রতি সফল রেফারে ৳300 বোনাস",
+        "app_name": "BBC99"
+    },
+    "logo": {
+        "url": "https://imageurls.kesug.com/uploads/e870afdc4f49b48c.png",
+        "width": 300
+    },
+    "favicon": {
+        "url": "https://imageurls.kesug.com/uploads/a79699dc014ba2fe.png"
+    },
+    "voucher": {
+        "enabled": true,
+        "path": "/m/voucherCenter",
+        "redirect_url": "/voucherCenter",
+        "logo": "",
+        "amounts": [
+            100,
+            250,
+            500
+        ],
+        "methods": {
+            "NAGAD": {
+                "name": "Nagad",
+                "image": "",
+                "enabled": true,
+                "min": 50,
+                "max": 9999,
+                "channels": [
+                    {
+                        "label": "চ্যানেল 3",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 1",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 75",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 86",
+                        "enabled": true
+                    }
+                ]
+            },
+            "BKASH": {
+                "name": "Bkash",
+                "image": "",
+                "enabled": true,
+                "min": 100,
+                "max": 30000,
+                "channels": [
+                    {
+                        "label": "চ্যানেল 3",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 1",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 75",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 86",
+                        "enabled": true
+                    }
+                ]
+            },
+            "BKASHSM": {
+                "name": "Send Money Bkash",
+                "image": "",
+                "enabled": true,
+                "min": 100,
+                "max": 30000,
+                "channels": [
+                    {
+                        "label": "চ্যানেল 3",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 1",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 75",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 86",
+                        "enabled": true
+                    }
+                ]
+            },
+            "NAGADSM": {
+                "name": "Send Money Nagad",
+                "image": "",
+                "enabled": true,
+                "min": 100,
+                "max": 30000,
+                "channels": [
+                    {
+                        "label": "চ্যানেল 3",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 1",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 75",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 86",
+                        "enabled": true
+                    }
+                ]
+            },
+            "USDT": {
+                "name": "USDT",
+                "image": "",
+                "enabled": true,
+                "min": 100,
+                "max": 30000,
+                "channels": [
+                    {
+                        "label": "চ্যানেল 3",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 1",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 75",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 86",
+                        "enabled": true
+                    }
+                ]
+            },
+            "ROCKET": {
+                "name": "Rocket",
+                "image": "",
+                "enabled": true,
+                "min": 100,
+                "max": 30000,
+                "channels": [
+                    {
+                        "label": "চ্যানেল 3",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 1",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 75",
+                        "enabled": true
+                    },
+                    {
+                        "label": "চ্যানেল 86",
+                        "enabled": true
+                    }
+                ]
+            }
+        }
+    },
+    "games": {
+        "enabled": true,
+        "language": "EN",
+        "in_app": true,
+        "back_url": "/m/home",
+        "page_size": 24,
+        "types": {
+            "RNG": true,
+            "LIVE": true,
+            "PVP": true,
+            "SPORTS": true,
+            "FISH": true,
+            "ELOTT": true,
+            "ESPORTS": true
+        },
+        "vendors": {
+            "2J": true,
+            "5G": true,
+            "AA": true,
+            "AE": true,
+            "AMBS": true,
+            "AMG": true,
+            "AUX": true,
+            "AVT": true,
+            "BBR": true,
+            "BGA": true,
+            "BNG": true,
+            "BOM": true,
+            "BSP": true,
+            "BT": true,
+            "BTG": true,
+            "BTI": true,
+            "CG": true,
+            "CQ9": true,
+            "DG": true,
+            "EG4": true,
+            "EGT": true,
+            "EP": true,
+            "EZ": true,
+            "FB": true,
+            "FC": true,
+            "FP": true,
+            "FS": true,
+            "FTG": true,
+            "GM": true,
+            "GPI": true,
+            "HS": true,
+            "IA": true,
+            "ID": true,
+            "IO": true,
+            "JDB": true,
+            "JK": true,
+            "JL": true,
+            "KA": true,
+            "KM": true,
+            "KP": true,
+            "L22": true,
+            "LUC": true,
+            "MA": true,
+            "MAHA": true,
+            "MAS": true,
+            "MG": true,
+            "MW": true,
+            "NE": true,
+            "NG": true,
+            "NLC": true,
+            "NS": true,
+            "OCT": true,
+            "PAS": true,
+            "PG": true,
+            "POLY": true,
+            "PP": true,
+            "PS": true,
+            "PT": true,
+            "R88": true,
+            "RCB": true,
+            "RG": true,
+            "RLX": true,
+            "RP": true,
+            "RT": true,
+            "SA": true,
+            "SB": true,
+            "SEX": true,
+            "SG": true,
+            "SPB": true,
+            "SS": true,
+            "SV3": true,
+            "SWG": true,
+            "TB": true,
+            "TCG_SEA": true,
+            "TF": true,
+            "TPG": true,
+            "U9W": true,
+            "VA": true,
+            "VIA": true,
+            "WD": true,
+            "WJ": true,
+            "WS": true,
+            "YB": true,
+            "YGD": true
+        },
+        "hidden": [],
+        "updated": "2026-10-06T14:38:04+02:00"
+    }
+}

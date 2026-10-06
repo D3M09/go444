@@ -1,0 +1,14 @@
+# Cached upstream assets on disk. These are low-value copies of public files, but
+# they must never be served directly: Proxy/index.php is the only thing allowed to
+# hand them out (it applies the brand/script rewriting on the way). Requests for
+# /Proxy/cache/... are already redirected away by Proxy/.htaccess and the root
+# router; this is the second layer.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
+
+Options -Indexes

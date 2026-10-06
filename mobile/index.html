@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="BN" content="notranslate">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#20232c">
+  <title>BBC99</title>
+
+  <!-- This page carries its own stylesheet and its own icons: no external or
+       upstream CSS/PNG is referenced. Data comes from the go444 backend via
+       /m/assets/home.js (see mobile/assets/config.js for the merchant code).
+       The one external request is the Material Symbols icon font used by the
+       category pills; everything else on the page is inline SVG or a local
+       PNG. display=block keeps the pills from showing a fallback glyph. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+  <link rel="stylesheet" href="/m/assets/home.css?v=20261006i">
+  <link rel="icon" type="image/png" href="/m/assets/img/favicon.png">
+</head>
+<body class="outter-app is-guest" data-page="home">
+  <!-- Inline icon sprite (subset of the app sprite that the markup references). -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="menu-gradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff60a"/><stop offset="1" stop-color="#ff6200"/>
+      </linearGradient>
+      <linearGradient id="star-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+        <stop offset="0" stop-color="#fff60a"/><stop offset="1" stop-color="#ff6200"/>
+      </linearGradient>
+      <linearGradient id="arrow-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+        <stop offset="0" stop-color="#4dc4ff"/><stop offset="1" stop-color="#3097ff"/>
+      </linearGradient>
+      <linearGradient id="winner-icon" x1="15.25" y1="21.0913" x2="15.25" y2="9.74949" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FEBB17"/><stop offset="1" stop-color="#FFD701"/>
+      </linearGradient>
+    </defs>
+
+    <symbol viewBox="0 0 30 23" id="footer-menu_0bdff4c1">
+      <path d="M27.1875 4H2.8125C1.77703 4 0.9375 3.16047 0.9375 2.125C0.9375 1.08953 1.77703 0.25 2.8125 0.25H27.1875C28.223 0.25 29.0625 1.08953 29.0625 2.125C29.0625 3.16047 28.223 4 27.1875 4Z" fill="white"/>
+      <path d="M27.1875 22.75H2.8125C1.77703 22.75 0.9375 21.9105 0.9375 20.875C0.9375 19.8395 1.77703 19 2.8125 19H27.1875C28.223 19 29.0625 19.8395 29.0625 20.875C29.0625 21.9105 28.223 22.75 27.1875 22.75Z" fill="white"/>
+      <path d="M27.1875 13.375H2.8125C1.77703 13.375 0.9375 12.5355 0.9375 11.5C0.9375 10.4645 1.77703 9.625 2.8125 9.625H27.1875C28.223 9.625 29.0625 10.4645 29.0625 11.5C29.0625 12.5355 28.223 13.375 27.1875 13.375Z" fill="white"/>
+    </symbol>
+
+    <symbol viewBox="0 0 18 32" id="arrow-right_a98663de">
+      <path d="M1.45 29.6a2 2 0 0 1 0-2.83L12.77 15.45 1.45 4.12A2 2 0 1 1 4.28 1.3l12.74 12.74a2 2 0 0 1 0 2.83L4.28 29.6a2 2 0 0 1-2.83 0z" fill="currentColor"/>
+    </symbol>
+
+    <symbol viewBox="0 0 36 36" id="notice-app_55f2a410">
+      <circle cx="18" cy="18" r="15" fill="none" stroke="#fff" stroke-width="2"/>
+      <rect x="12" y="8" width="12.7" height="18.9" fill="#fff"/>
+    </symbol>
+
+    <symbol viewBox="0 0 36 36" id="header-gift_ec284a77">
+      <rect x="6" y="14" width="24" height="16" rx="2" fill="#fff"/>
+      <rect x="4" y="10" width="28" height="5" rx="1.5" fill="#fff"/>
+      <rect x="16" y="10" width="4" height="20" fill="#ff6200"/>
+      <path d="M18 10C14 4 8 5 8 8s5 2 10 2zM18 10c4-6 10-5 10-2s-5 2-10 2z" fill="#ff6200"/>
+    </symbol>
+  </svg>
+
+  <div id="root">
+    <div data-reactroot="">
+      <div>
+        <div id="mc-animate-container" class="v-base v-detail-base">
+          <div>
+            <div class="_container_box">
+
+              <!-- ============ header ============ -->
+              <div class="home-header">
+                <div class="header-content">
+                  <div class="header-user">
+                    <div class="header-logo">
+                      <img class="common-logo" src="/m/assets/img/logo.png" alt="BBC99" width="911" height="274">
+                    </div>
+                    <div class="header-nav only-guest">
+                      <div class="login-btn" id="hdr-login"><span>লগইন</span></div>
+                      <div class="register-btn" id="hdr-register"><span>নিবন্ধন</span>
+                        <svg class="am-icon am-icon-header-gift_ec284a77 am-icon-md header-gift animate__animated animate__infinite animate__swing"><use xlink:href="#header-gift_ec284a77"></use></svg>
+                      </div>
+                      <div class="header-menu"><svg class="am-icon am-icon-footer-menu_0bdff4c1 am-icon-md"><use xlink:href="#footer-menu_0bdff4c1"></use></svg></div>
+                    </div>
+                    <div class="header-nav only-auth">
+                      <div class="deposit-btn" id="hdr-deposit" role="button" aria-label="Deposit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="3"/><path d="M2.5 10h19"/><path d="M12 15.5v-3M10.5 14h3"/></svg>
+                      </div>
+                      <div class="withdraw-btn" id="hdr-withdraw" role="button" aria-label="Withdraw">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V5"/><path d="M8 9l4-4 4 4"/><path d="M4 17v1.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V17"/></svg>
+                      </div>
+                      <div class="user-balance">
+                        <div class="user-wrap"><span class="user-name" id="hdr-name">সদস্য</span></div>
+                        <div class="balance"><span class="symbol">৳</span><span id="hdr-balance">0.00</span></div>
+                      </div>
+                      <div class="header-menu"><svg class="am-icon am-icon-footer-menu_0bdff4c1 am-icon-md"><use xlink:href="#footer-menu_0bdff4c1"></use></svg></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ============ home ============ -->
+              <div class="home-container">
+                <div id="mc-app-home-root">
+                  <div class="mc_app_box">
+
+                    <div class="banner_notice">
+                      <!-- Jackpot roller in place of the promo banner. Eight 0-9
+                           strips; the clip shows one digit and home.js rolls each
+                           strip to the current value. -->
+                      <div class="home-roll-num" id="home-roll-num">
+                        <div class="jackpot-num__list">
+                          <div class="symbol"><span>৳</span></div>
+                          <div class="jackpot-num__digits">
+                            <div class="jackpot-num__item"><div class="jackpot-num-clip"><ul class="scroll-num" style="transform: translateY(calc(-9 * var(--jp-step)));"><li> 0 </li><li> 1 </li><li> 2 </li><li> 3 </li><li> 4 </li><li> 5 </li><li> 6 </li><li> 7 </li><li> 8 </li><li> 9 </li></ul></div></div>
+                            <div class="jackpot-num__item"><div class="jackpot-num-clip"><ul class="scroll-num" style="transform: translateY(calc(-2 * var(--jp-step)));"><li> 0 </li><li> 1 </li><li> 2 </li><li> 3 </li><li> 4 </li><li> 5 </li><li> 6 </li><li> 7 </li><li> 8 </li><li> 9 </li></ul></div></div>
+                            <div class="point"> , </div>
+                            <div class="jackpot-num__item"><div class="jackpot-num-clip"><ul class="scroll-num" style="transform: translateY(calc(-9 * var(--jp-step)));"><li> 0 </li><li> 1 </li><li> 2 </li><li> 3 </li><li> 4 </li><li> 5 </li><li> 6 </li><li> 7 </li><li> 8 </li><li> 9 </li></ul></div></div>
+                            <div class="jackpot-num__item"><div class="jackpot-num-clip"><ul class="scroll-num" style="transform: translateY(calc(-8 * var(--jp-step)));"><li> 0 </li><li> 1 </li><li> 2 </li><li> 3 </li><li> 4 </li><li> 5 </li><li> 6 </li><li> 7 </li><li> 8 </li><li> 9 </li></ul></div></div>
+                            <div class="jackpot-num__item"><div class="jackpot-num-clip"><ul class="scroll-num" style="transform: translateY(calc(-6 * var(--jp-step)));"><li> 0 </li><li> 1 </li><li> 2 </li><li> 3 </li><li> 4 </li><li> 5 </li><li> 6 </li><li> 7 </li><li> 8 </li><li> 9 </li></ul></div></div>
+                            <div class="point"> , </div>
+                            <div class="jackpot-num__item"><div class="jackpot-num-clip"><ul class="scroll-num" style="transform: translateY(calc(-1 * var(--jp-step)));"><li> 0 </li><li> 1 </li><li> 2 </li><li> 3 </li><li> 4 </li><li> 5 </li><li> 6 </li><li> 7 </li><li> 8 </li><li> 9 </li></ul></div></div>
+                            <div class="jackpot-num__item"><div class="jackpot-num-clip"><ul class="scroll-num" style="transform: translateY(calc(-8 * var(--jp-step)));"><li> 0 </li><li> 1 </li><li> 2 </li><li> 3 </li><li> 4 </li><li> 5 </li><li> 6 </li><li> 7 </li><li> 8 </li><li> 9 </li></ul></div></div>
+                            <div class="jackpot-num__item"><div class="jackpot-num-clip"><ul class="scroll-num" style="transform: translateY(calc(-4 * var(--jp-step)));"><li> 0 </li><li> 1 </li><li> 2 </li><li> 3 </li><li> 4 </li><li> 5 </li><li> 6 </li><li> 7 </li><li> 8 </li><li> 9 </li></ul></div></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="notice_root">
+                        <div class="notice_bg">
+                          <div class="marquee">
+                            <div class="marquee_content">
+                              <span class="content-item">BBC99 × WINTK কৌশলগত ব্র্যান্ড সহযোগিতা কৌশলগত ব্র্যান্ড অংশীদারিত্ব আনুষ্ঠানিকভাবে চালু করা হয়েছে। গেমিং স্বর্গে আপনাকে স্বাগতম!</span>
+                              <!-- The copy is repeated so the -50% loop is seamless. -->
+                              <span class="content-item" aria-hidden="true">BBC99 × WINTK কৌশলগত ব্র্যান্ড সহযোগিতা কৌশলগত ব্র্যান্ড অংশীদারিত্ব আনুষ্ঠানিকভাবে চালু করা হয়েছে। গেমিং স্বর্গে আপনাকে স্বাগতম!</span>
+                            </div>
+                          </div>
+                          <div class="app-download-wrap animate__animated animate__heartBeat animate__infinite animate__slower">
+                            <svg class="am-icon am-icon-notice-app_55f2a410 am-icon-md"><use xlink:href="#notice-app_55f2a410"></use></svg>
+                            <span>APP</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="home-content">
+                      <div class="gameEnter-wrap">
+                        <div class="gameEnter-content">
+                          <div class="game-menu">
+                            <div class="menu-nav menu-next"><svg class="am-icon am-icon-arrow-right_a98663de am-icon-md"><use xlink:href="#arrow-right_a98663de"></use></svg></div>
+                            <div class="game-menu-scroll">
+                              <div class="game-menu-list" id="game-menu-list"></div>
+                            </div>
+                          </div>
+                          <div class="game-content-wrap">
+                            <div class="game-content-wrap-bg">
+                              <div class="game-tabs-content on">
+                                <div class="content-bg">
+                                  <div class="hot-game-wrap">
+                                    <div class="game-title" id="game-title">গরম</div>
+                                    <!-- provider filter + search by name, under the game-type menu -->
+                                    <div class="game-filters" hidden>
+                                      <div class="provider-strip" id="provider-strip" hidden></div>
+                                      <div class="game-search">
+                                        <input class="game-search__input" id="game-search" type="search"
+                                               inputmode="search" autocomplete="off" autocorrect="off" spellcheck="false"
+                                               placeholder="Game name" aria-label="Search games by name">
+                                        <button class="game-search__clear" id="game-search-clear" type="button"
+                                                hidden aria-label="Clear search">&#215;</button>
+                                        <svg class="game-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                          <circle cx="11" cy="11" r="7"/><path d="M16.2 16.2 21 21"/>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="hot-game-content">
+                                      <div class="game-list" id="game-list"></div>
+                                      <!-- Spinner (reference: .scroll-loading) shown while a games request is in flight. -->
+                                      <div class="game-list-loading" id="game-list-loading" hidden>
+                                        <svg class="loading-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 1 10 10h-3a7 7 0 0 0-7-7z"/></svg>
+                                      </div>
+                                      <div class="game-list-more" id="game-list-more" hidden>
+                                        <button type="button" id="game-list-more-btn">Load more</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="winner-board">
+                      <div class="winner-title"><span>সর্বশেষ বিজয়ী</span></div>
+                      <div class="winner-content">
+                        <div class="winner-swiper swiper-container-initialized swiper-container-vertical">
+                          <div class="swiper-wrapper winner-list" id="winner-list"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>                  </div>
+                </div>
+              </div>
+
+              <!-- ============ APP DOWNLOAD BANNER ============ -->
+              <div class="app-download-wrap" id="app-download-bar">
+                <div class="download-bg">
+                  <div class="download-title">
+                    <div class="download-title-text">
+                      <h5>যেকোনো জায়গা থেকে বাজি ধরুন! এখনই আমাদের অ্যাপটি ডাউনলোড করুন!</h5>
+                      <p>মোবাইল ইন্টারনেট, যেকোনো জায়গা থেকে আনন্দদায়ক অভিজ্ঞতা — সব ব্রাউজারে iOS এবং Android সমর্থিত।</p>
+                    </div>
+                  </div>
+                  <div class="app-icon">
+                    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="10" y="4" width="28" height="40" rx="6" stroke="#f5b73d" stroke-width="2.5"/><rect x="18" y="9" width="12" height="2.5" rx="1.25" fill="#f5b73d"/><path d="M24 20l7 4.5-7 4.5z" fill="#ff8a1e"/><circle cx="24" cy="38" r="2" fill="#f5b73d"/></svg>
+                  </div>
+                </div>
+                <div class="download-btns">
+                  <div class="download-item android"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 9.5h11V17a1.5 1.5 0 0 1-1.5 1.5h-1v2a1 1 0 1 1-2 0v-2h-2v2a1 1 0 1 1-2 0v-2H8A1.5 1.5 0 0 1 6.5 17zM4.5 9.7a1 1 0 0 1 2 0v5.1a1 1 0 1 1-2 0zm13 0a1 1 0 0 1 2 0v5.1a1 1 0 1 1-2 0zM7.2 8.7C7.6 6.4 9.6 4.7 12 4.7s4.4 1.7 4.8 4zM9.3 3.2l1-1.6.8.5-.9 1.6zm4.5-1.1l1 1.6-.8.5-1-1.6z"/></svg><span>Android</span></div>
+                  <div class="download-item ios"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.7-1.8-3.3-1.8-1.4-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.8 3-.8s1.8.8 3 .8 2-1.1 2.8-2.2c.9-1.3 1.2-2.5 1.2-2.6-.1 0-2.6-1-2.6-3.5zM14.2 5.9c.6-.8 1-1.9.9-3-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.8-.9 2.9 1 .1 2-.5 2.6-1.3z"/></svg><span>iOS</span></div>
+                </div>
+              </div>
+
+              <!-- ============ footer ============ -->
+              <div class="home-footer-container">
+                <div class="home-footer-content">
+                  <div class="game-help">
+                    <div class="footer-title">সাহায্য</div>
+                    <div class="footer-help"><div class="help-nav-item">কীভাবে খেলবেন</div></div>
+                    <div class="footer-payments">
+                      <div class="paymen-item"><img src="/m/assets/img/bkash.png" alt="bKash"></div>
+                      <div class="paymen-item"><img src="/m/assets/img/nagad.png" alt="Nagad"></div>
+                      <div class="paymen-item"><img src="/m/assets/img/rocket.png" alt="Rocket"></div>
+                    </div>
+                  </div>
+                  <div class="footer-vendor">
+                    <div class="vendor-title">প্রদানকারী</div>
+                    <!-- Filled from the go444 game-vendor relay (GCSGAME_newGameVendor). -->
+                    <div class="vendor-icons" id="vendor-icons"></div>
+                  </div>
+                  <div class="footer-copyright">
+                    <div class="footer-logo"><img src="/m/assets/img/logo.png" alt="BBC99" width="911" height="274"></div>
+                    <div class="copyright">© BBC99 - ২০২৬</div>
+                    <div class="follow-us">
+                      <div class="media-list">
+                        <div class="media-item"><span class="social-icon" role="img" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8.1V14h2.4v7z"/></svg></span></div>
+                        <div class="media-item"><span class="social-icon" role="img" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.1l-6.8 7.7L21.9 21h-6.3l-4.4-5.7L6 21H2.9l7.3-8.3L2.4 3h6.4l4 5.2zm-1.1 16h1.7L7.3 4.8H5.5z"/></svg></span></div>
+                        <div class="media-item"><span class="social-icon" role="img" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.9a2.5 2.5 0 0 0-1.8-1.8C18.2 5.7 12 5.7 12 5.7s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.9C2 9.5 2 12 2 12s0 2.5.4 4.1a2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8C22 14.5 22 12 22 12s0-2.5-.4-4.1zM10 15.2V8.8l5.2 3.2z"/></svg></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ============ slide-in menu (header hamburger) ============
+       Everything except home is the upstream's own page: the proxy serves it
+       with the same HTML and the same backend, so these links go straight into
+       the proxied member centre instead of a placeholder. -->
+  <div class="px-menu-scrim" id="px-menu-scrim" hidden></div>
+  <nav class="px-menu" id="px-menu" hidden aria-label="Menu">
+    <div class="px-menu-head">
+      <span class="px-menu-title">মেনু</span>
+      <button class="px-menu-close" type="button" id="px-menu-close" aria-label="Close menu">&#215;</button>
+    </div>
+    <a class="px-menu-item" href="/m/home">হোম</a>
+    <a class="px-menu-item" href="/m/gameCenter">ক্যাসিনো</a>
+    <a class="px-menu-item" href="/m/member/home">আমার অ্যাকাউন্ট</a>
+    <a class="px-menu-item" href="/m/voucherCenter">ডিপোজিট</a>
+    <a class="px-menu-item" href="/m/withdraw">উইথড্র</a>
+    <a class="px-menu-item" href="/m/inviteFriends">আমন্ত্রণ</a>
+    <a class="px-menu-item" href="/m/activity">প্রমোশন</a>
+    <a class="px-menu-item" href="/m/gameRecord">গেম রেকর্ড</a>
+    <a class="px-menu-item" href="/m/transaction/record">লেনদেন</a>
+    <button class="px-menu-item" type="button" id="px-menu-share">শেয়ার করুন</button>
+    <button class="px-menu-item px-menu-item--danger" type="button" id="px-menu-logout" hidden>লগ আউট</button>
+  </nav>
+
+  <!-- ============ bottom nav ============ -->
+  <div id="menu">
+    <a class="on" href="/m/home">
+      <div class="footer_icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3.2 2.8 11h2.4v9h5.2v-5.6h3.2V20h5.2v-9h2.4z"/></svg></div><span>হোম</span>
+    </a>
+    <a href="#" id="nav-share">
+      <div class="footer_icon share"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 15.6c-.8 0-1.5.3-2 .8l-7-4.1c.1-.3.1-.6 0-.9l7-4.1c.6.5 1.3.8 2 .8a3.3 3.3 0 1 0-3.3-3.3c0 .3 0 .6.1.9l-7 4.1a3.3 3.3 0 1 0 0 4.9l7 4.1c-.1.3-.1.6-.1.9A3.3 3.3 0 1 0 18 15.6z"/></svg></div><span>শেয়ার</span>
+    </a>
+    <a href="/m/activity" id="nav-promo">
+      <div class="footer_icon promo"><svg class="footer-center-icon animate__animated animate__heartBeat animate__delay-1s animate__infinite animate__slower" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 8.6h16V6.4H4zM5.5 10v8.4A2.1 2.1 0 0 0 7.6 20.5h8.8a2.1 2.1 0 0 0 2.1-2.1V10zM12 8.6H5.2V6.4h4.2c-1.3-.6-2-1.3-2-2.3 0-.8.6-1.4 1.4-1.4 1.3 0 2.6 1.6 3.2 3.1.6-1.5 1.9-3.1 3.2-3.1.8 0 1.4.6 1.4 1.4 0 1-.7 1.7-2 2.3h4.2v2.2z"/></svg></div><span>প্রমোশন</span>
+    </a>
+    <a href="/m/voucherCenter" id="nav-deposit">
+      <div class="footer_icon share-button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5zM12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM5 7.5a1 1 0 0 0 0 2 1 1 0 0 0 0-2zm14 7a1 1 0 0 0 0 2 1 1 0 0 0 0-2z"/></svg></div><span>ডিপোজিট</span>
+    </a>
+    <a class="footer-member" href="/m/login" data-auth-href="/m/member/home">
+      <div class="footer_icon member"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4 0-8 2-8 4.5V21h16v-2.5c0-2.5-4-4.5-8-4.5z"/></svg></div><span>সদস্যরা</span>
+    </a>
+  </div>
+
+  <script src="/m/assets/config.js?v=20261002g"></script>
+  <script src="/m/assets/api.js?v=20261006d"></script>
+  <script src="/m/assets/home.js?v=20261006j"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "d3m09/proxy",
+  "description": "Reverse proxy with caching and admin panel",
+  "type": "project",
+  "require": {
+    "php": ">=8.1"
+  }
+}

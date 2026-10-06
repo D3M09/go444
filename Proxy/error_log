@@ -1,0 +1,128 @@
+[25-Sep-2026 23:50:03 UTC] Proxy upstream degraded (slow): 2036ms, fails=1, serving cached copies for 30s
+[26-Sep-2026 01:41:06 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/agent/transferDownline
+[26-Sep-2026 01:41:06 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/agent/transferDownline
+[26-Sep-2026 01:41:07 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/agent/transferDownline
+[26-Sep-2026 01:41:08 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/agent/transferDownline
+[26-Sep-2026 01:41:08 UTC] Proxy upstream degraded (failed): 3066ms, fails=1, serving cached copies for 30s
+[26-Sep-2026 02:38:22 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/lgw/games/mobile_game_menus
+[26-Sep-2026 02:38:23 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/lgw/games/mobile_game_menus
+[26-Sep-2026 02:38:23 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/lgw/games/mobile_game_menus
+[26-Sep-2026 02:38:24 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/lgw/games/mobile_game_menus
+[26-Sep-2026 02:38:24 UTC] Proxy upstream degraded (failed): 2207ms, fails=1, serving cached copies for 30s
+[26-Sep-2026 03:31:49 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/feedback
+[26-Sep-2026 03:31:50 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/feedback
+[26-Sep-2026 03:31:50 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/feedback
+[26-Sep-2026 03:31:51 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/feedback
+[26-Sep-2026 03:31:51 UTC] Proxy upstream degraded (failed): 2503ms, fails=1, serving cached copies for 30s
+[26-Sep-2026 04:46:47 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/agent/downline
+[26-Sep-2026 04:46:47 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/agent/downline
+[26-Sep-2026 04:46:48 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/agent/downline
+[26-Sep-2026 04:46:49 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/agent/downline
+[26-Sep-2026 04:46:49 UTC] Proxy upstream degraded (failed): 2863ms, fails=1, serving cached copies for 30s
+[26-Sep-2026 05:19:59 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/relay/
+[26-Sep-2026 05:19:59 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/relay/
+[26-Sep-2026 05:20:00 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/relay/
+[26-Sep-2026 05:20:01 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/relay/
+[26-Sep-2026 05:20:01 UTC] Proxy upstream degraded (failed): 2716ms, fails=1, serving cached copies for 30s
+[26-Sep-2026 09:34:00 UTC] Proxy upstream degraded (slow): 2413ms, fails=1, serving cached copies for 30s
+[26-Sep-2026 12:40:28 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/game/lotto/cancelSubOrders
+[26-Sep-2026 12:40:28 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/game/lotto/cancelSubOrders
+[26-Sep-2026 12:40:29 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/game/lotto/cancelSubOrders
+[26-Sep-2026 12:40:29 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/game/lotto/cancelSubOrders
+[26-Sep-2026 12:40:29 UTC] Proxy upstream degraded (failed): 1773ms, fails=1, serving cached copies for 30s
+[26-Sep-2026 20:47:52 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/info/nickname
+[26-Sep-2026 20:47:53 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/info/nickname
+[26-Sep-2026 20:47:53 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/info/nickname
+[26-Sep-2026 20:47:54 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/info/nickname
+[26-Sep-2026 20:47:54 UTC] Proxy upstream degraded (failed): 2525ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 04:08:00 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/agent/downline/password
+[27-Sep-2026 04:08:01 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/agent/downline/password
+[27-Sep-2026 04:08:01 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/agent/downline/password
+[27-Sep-2026 04:08:02 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/agent/downline/password
+[27-Sep-2026 04:08:02 UTC] Proxy upstream degraded (failed): 2465ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 04:49:17 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/info/mobile
+[27-Sep-2026 04:49:17 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/info/mobile
+[27-Sep-2026 04:49:18 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/info/mobile
+[27-Sep-2026 04:49:19 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/info/mobile
+[27-Sep-2026 04:49:19 UTC] Proxy upstream degraded (failed): 2507ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 05:23:58 UTC] Proxy upstream degraded (slow): 2043ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 05:33:41 UTC] Proxy upstream degraded (slow): 2108ms, fails=2, serving cached copies for 30s
+[27-Sep-2026 05:57:11 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/paymentPassword/reset
+[27-Sep-2026 05:57:12 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/paymentPassword/reset
+[27-Sep-2026 05:57:13 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/paymentPassword/reset
+[27-Sep-2026 05:57:13 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/paymentPassword/reset
+[27-Sep-2026 05:57:13 UTC] Proxy upstream degraded (failed): 3333ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 06:06:58 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/v2/transaction/withdraw
+[27-Sep-2026 06:06:59 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/v2/transaction/withdraw
+[27-Sep-2026 06:06:59 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/v2/transaction/withdraw
+[27-Sep-2026 06:07:00 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/v2/transaction/withdraw
+[27-Sep-2026 06:07:00 UTC] Proxy upstream degraded (failed): 1954ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 06:39:59 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/agent/downline/nickname2
+[27-Sep-2026 06:40:00 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/agent/downline/nickname2
+[27-Sep-2026 06:40:01 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/agent/downline/nickname2
+[27-Sep-2026 06:40:02 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/agent/downline/nickname2
+[27-Sep-2026 06:40:02 UTC] Proxy upstream degraded (failed): 3565ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 09:03:57 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/info/email
+[27-Sep-2026 09:03:58 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/info/email
+[27-Sep-2026 09:03:58 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/info/email
+[27-Sep-2026 09:03:59 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/info/email
+[27-Sep-2026 09:03:59 UTC] Proxy upstream degraded (failed): 2629ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 10:13:57 UTC] Proxy upstream degraded (slow): 2044ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 10:29:46 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/password
+[27-Sep-2026 10:29:46 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/password
+[27-Sep-2026 10:29:47 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/password
+[27-Sep-2026 10:29:47 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/password
+[27-Sep-2026 10:29:47 UTC] Proxy upstream degraded (failed): 2170ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 11:31:56 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/register/mobile
+[27-Sep-2026 11:31:57 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/register/mobile
+[27-Sep-2026 11:31:58 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/register/mobile
+[27-Sep-2026 11:31:59 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/register/mobile
+[27-Sep-2026 11:31:59 UTC] Proxy upstream degraded (failed): 4214ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 12:24:37 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/cpf/submit
+[27-Sep-2026 12:24:38 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/cpf/submit
+[27-Sep-2026 12:24:38 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/cpf/submit
+[27-Sep-2026 12:24:39 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/cpf/submit
+[27-Sep-2026 12:24:39 UTC] Proxy upstream degraded (failed): 2032ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 13:11:05 UTC] Proxy upstream degraded (slow): 2491ms, fails=1, serving cached copies for 30s
+[27-Sep-2026 13:16:57 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/ga/bind
+[27-Sep-2026 13:16:58 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/ga/bind
+[27-Sep-2026 13:16:58 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/ga/bind
+[27-Sep-2026 13:16:59 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/ga/bind
+[27-Sep-2026 13:16:59 UTC] Proxy upstream degraded (failed): 2813ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 00:26:04 UTC] Proxy upstream degraded (slow): 2265ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 02:00:04 UTC] Proxy upstream degraded (slow): 2304ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 02:40:44 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/member/password/bindAndReset
+[28-Sep-2026 02:40:44 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/member/password/bindAndReset
+[28-Sep-2026 02:40:45 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/member/password/bindAndReset
+[28-Sep-2026 02:40:46 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/member/password/bindAndReset
+[28-Sep-2026 02:40:46 UTC] Proxy upstream degraded (failed): 2250ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 04:58:56 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/agent/transferDownline
+[28-Sep-2026 04:58:56 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/agent/transferDownline
+[28-Sep-2026 04:58:57 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/agent/transferDownline
+[28-Sep-2026 04:58:57 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/agent/transferDownline
+[28-Sep-2026 04:58:57 UTC] Proxy upstream degraded (failed): 2062ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 05:08:14 UTC] Proxy upstream error after 1 tries: Connection timed out after 3001 milliseconds status:0 url:https://www.1333bk.com/wps/relay/MCSFE_getMerchantAvailablePromotions
+[28-Sep-2026 05:08:14 UTC] Proxy upstream error after 1 tries: Connection timed out after 3001 milliseconds status:0 url:https://www.1333bk.com/wps/relay/PROMOFE_recordCustomerHeartbeatDaily
+[28-Sep-2026 05:08:14 UTC] Proxy upstream error after 1 tries: Connection timed out after 3001 milliseconds status:0 url:https://www.1333bk.com/wps/relay/CCSFE_getListAnnouncements?types=PR&platform=M&category=app_download&ext=avif
+[28-Sep-2026 05:08:14 UTC] Proxy upstream degraded (slow): 3673ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 05:08:15 UTC] Proxy upstream degraded (slow): 3771ms, fails=2, serving cached copies for 30s
+[28-Sep-2026 05:08:15 UTC] Proxy upstream degraded (slow): 3834ms, fails=3, serving cached copies for 30s
+[28-Sep-2026 05:08:15 UTC] Proxy upstream error after 1 tries: Connection timed out after 3000 milliseconds status:0 url:https://www.1333bk.com/wps/relay/PROMOFE_getAchievementSettingList
+[28-Sep-2026 05:08:15 UTC] Proxy upstream degraded (slow): 3297ms, fails=4, serving cached copies for 30s
+[28-Sep-2026 05:38:41 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/lgw/games/mobile_game_menus
+[28-Sep-2026 05:38:42 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/lgw/games/mobile_game_menus
+[28-Sep-2026 05:38:42 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/lgw/games/mobile_game_menus
+[28-Sep-2026 05:38:43 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/lgw/games/mobile_game_menus
+[28-Sep-2026 05:38:43 UTC] Proxy upstream degraded (failed): 2562ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 05:57:25 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/feedback
+[28-Sep-2026 05:57:26 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/feedback
+[28-Sep-2026 05:57:26 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/feedback
+[28-Sep-2026 05:57:27 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/feedback
+[28-Sep-2026 05:57:27 UTC] Proxy upstream degraded (failed): 2142ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 07:53:21 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bk.com/wps/v2/verification/mail/verify-current
+[28-Sep-2026 07:53:22 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet999.com/wps/v2/verification/mail/verify-current
+[28-Sep-2026 07:53:22 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet.ai/wps/v2/verification/mail/verify-current
+[28-Sep-2026 07:53:23 UTC] Proxy upstream error after 1 tries:  status:500 url:https://www.1333bet888.com/wps/v2/verification/mail/verify-current
+[28-Sep-2026 07:53:23 UTC] Proxy upstream degraded (failed): 2676ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 08:24:27 UTC] Proxy upstream degraded (slow): 2190ms, fails=1, serving cached copies for 30s
+[28-Sep-2026 09:55:03 UTC] Proxy upstream degraded (slow): 2408ms, fails=1, serving cached copies for 30s

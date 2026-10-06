@@ -1,0 +1,647 @@
+/* ==========================================================================
+   BBC99 mobile frontend — shared styles
+   Served from /m/assets/app.css (see mobile/assets/).
+   Pure HTML + CSS: no frameworks, no JS required.
+   ========================================================================== */
+
+:root {
+  --bg:        #0a0d13;
+  --surface:   #141a24;
+  --surface-2: #1b2330;
+  --surface-3: #232d3d;
+  --border:    #2a3546;
+  --text:      #eaeff8;
+  --muted:     #8d99ac;
+  --muted-2:   #66718a;
+
+  --accent:    #f5b73d;
+  --accent-2:  #ff8a1e;
+  --accent-ink:#241a05;
+  --grad:      linear-gradient(135deg, #f8cd5a 0%, #f5a623 55%, #ff7a18 100%);
+  --grad-soft: linear-gradient(135deg, rgba(248,205,90,.16), rgba(255,122,24,.16));
+  --good:      #2ecc71;
+  --bad:       #ff5d6c;
+
+  --radius:    16px;
+  --radius-sm: 12px;
+  --radius-lg: 22px;
+  --shadow:    0 10px 30px rgba(0,0,0,.45);
+  --shadow-sm: 0 4px 14px rgba(0,0,0,.35);
+  --tap:       44px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Bengali", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  /* soft ambient glow behind the content */
+  background:
+    radial-gradient(120% 40% at 50% -10%, rgba(245,166,35,.14), transparent 60%),
+    var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button, input, select { font: inherit; color: inherit; }
+
+/* Center the app on wider screens, like a mobile viewport. */
+.page {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 16px calc(84px + env(safe-area-inset-bottom));
+  min-height: 100vh;
+}
+.page--auth { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+
+/* ---------- top bar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: calc(14px + env(safe-area-inset-top)) 0 14px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: linear-gradient(180deg, var(--bg) 65%, rgba(10,13,19,0));
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  font-size: 18px;
+}
+.brand__mark {
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  background: var(--grad);
+  color: var(--accent-ink);
+  display: grid; place-items: center;
+  font-weight: 900; font-size: 15px;
+  box-shadow: var(--shadow-sm);
+}
+.brand__name b { color: var(--accent); }
+
+.topbar__actions { display: flex; align-items: center; gap: 8px; }
+
+/* ---------- generic icon button ---------- */
+.icon-btn {
+  width: var(--tap); height: var(--tap);
+  min-width: var(--tap);
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: pointer;
+}
+.icon-btn svg { width: 20px; height: 20px; }
+.icon-btn:hover { color: var(--text); border-color: var(--surface-3); }
+
+/* ---------- pill / badge ---------- */
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px; font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.pill--accent { background: var(--grad-soft); border-color: rgba(245,183,61,.35); color: var(--accent); }
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px; font-weight: 700;
+  background: var(--grad); color: var(--accent-ink);
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform .06s ease, filter .15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 18px; height: 18px; }
+
+.btn--primary { background: var(--grad); color: var(--accent-ink); box-shadow: 0 8px 22px rgba(245,166,35,.28); }
+.btn--primary:hover { filter: brightness(1.04); }
+.btn--ghost { background: var(--surface); border-color: var(--border); color: var(--text); }
+.btn--ghost:hover { border-color: var(--surface-3); }
+.btn--sm { min-height: 40px; width: auto; padding: 0 14px; font-size: 13px; border-radius: 10px; }
+
+/* ---------- balance / wallet card ---------- */
+.balance {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(245,183,61,.22), transparent 55%),
+    linear-gradient(180deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.balance__label { color: var(--muted); font-size: 12px; letter-spacing: .4px; text-transform: uppercase; }
+.balance__amount { font-size: 30px; font-weight: 800; margin: 6px 0 2px; }
+.balance__amount small { font-size: 16px; color: var(--accent); margin-right: 4px; }
+.balance__meta { display: flex; gap: 16px; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.balance__meta b { color: var(--text); }
+.balance__row { display: flex; gap: 10px; margin-top: 16px; }
+.balance__row .btn { flex: 1; }
+
+/* ---------- promo banner ---------- */
+.promo {
+  margin-top: 16px;
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  background: var(--grad);
+  color: var(--accent-ink);
+  box-shadow: 0 10px 24px rgba(245,166,35,.25);
+}
+.promo__text h3 { margin: 0 0 2px; font-size: 16px; }
+.promo__text p  { margin: 0; font-size: 12px; opacity: .8; font-weight: 600; }
+.promo__cta {
+  background: rgba(0,0,0,.22);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700; font-size: 13px;
+  white-space: nowrap;
+}
+
+/* ---------- section headings ---------- */
+.section {
+  margin-top: 22px;
+}
+.section__head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.section__head h2 { margin: 0; font-size: 15px; letter-spacing: .2px; }
+.section__head a { color: var(--accent); font-size: 12px; font-weight: 700; }
+
+/* ---------- quick actions ---------- */
+.quick {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.quick__item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 6px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px; font-weight: 600;
+}
+.quick__item:hover { border-color: var(--surface-3); color: var(--text); }
+.quick__icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  display: grid; place-items: center;
+  background: var(--grad-soft);
+  color: var(--accent);
+}
+.quick__icon svg { width: 20px; height: 20px; }
+
+/* ---------- category grid ---------- */
+.cats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.cat {
+  position: relative;
+  border-radius: var(--radius-sm);
+  padding: 14px 10px;
+  min-height: 92px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  overflow: hidden;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.cat.is-active {
+  border-color: rgba(245,183,61,.75);
+  box-shadow: 0 0 0 2px rgba(245,183,61,.18);
+}
+.section__meta { color: var(--muted); font-size: 12px; font-weight: 600; }
+
+/* ---------- full games grid (all games, with logos) ---------- */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.games-grid .game { flex: none; width: auto; }
+.game--grid .game__art { height: 74px; padding: 6px; }
+.game--grid .game__art img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.game--grid .game__name { font-size: 11px; line-height: 1.25; }
+.game--grid .game__tag { font-size: 10px; }
+.games-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 18px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+.cat::after {
+  content: "";
+  position: absolute; inset: auto -30% -60% auto;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,183,61,.22), transparent 70%);
+}
+.cat__icon { font-size: 22px; }
+.cat__name { font-size: 12px; font-weight: 700; }
+.cat__count { font-size: 10px; color: var(--muted-2); font-weight: 600; }
+
+/* ---------- horizontal game scroller ---------- */
+.scroller {
+  display: flex; gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; scrollbar-width: none;
+}
+.scroller::-webkit-scrollbar { display: none; }
+.game {
+  flex: 0 0 132px;
+  scroll-snap-align: start;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.game__art {
+  height: 96px;
+  display: grid; place-items: center;
+  font-size: 34px;
+  background: linear-gradient(160deg, var(--surface-3), var(--surface-2));
+}
+.game__body { padding: 8px 10px 10px; }
+.game__name { font-size: 12px; font-weight: 700; }
+.game__tag { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+/* ---------- bottom navigation ---------- */
+.nav {
+  position: fixed;
+  left: 50%; transform: translateX(-50%);
+  bottom: 0;
+  width: 100%; max-width: 480px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(16,21,29,.92);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+  z-index: 30;
+}
+.nav__item {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 6px 0;
+  color: var(--muted-2);
+  font-size: 10px; font-weight: 700;
+}
+.nav__item svg { width: 22px; height: 22px; }
+.nav__item.is-active { color: var(--accent); }
+
+/* ==========================================================================
+   Auth pages (login / register)
+
+   Layout follows the reference design: a near-black green stage, the brand
+   lockup centred above a gold title, pill-shaped fields with a coloured icon
+   at the left, a gold call-to-action, then a "Or Connect With" rule and two
+   circular social buttons.
+
+   No photo is fetched: the reference sits on a dark casino collage, and these
+   pages deliberately reference no external asset, so the depth comes from the
+   layered gradients in .auth-bg instead.
+   ========================================================================== */
+.auth {
+  --ink:      #05100c;
+  --stage:    #061410;
+  --stage-2:  #0a2019;
+  --gold:     #ffd426;
+  --gold-ink: #2a1f00;
+  --mint:     #2fe0a6;   /* field icon + placeholder */
+  --link:     #2bd07f;   /* the "Register" / "Login" switch */
+  --line:     rgba(255,255,255,.10);
+  --field:    rgba(255,255,255,.055);
+  min-height: 100vh;
+  background: var(--stage);
+  overflow-x: hidden;
+}
+
+/* ---------- ambient backdrop ---------- */
+.auth-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.auth-bg::before {
+  /* the photo-ish wash: two soft pools of light in the upper corners */
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(90% 55% at 12% 0%, rgba(47,224,166,.16), transparent 62%),
+    radial-gradient(80% 50% at 92% 6%, rgba(255,212,38,.13), transparent 60%),
+    linear-gradient(170deg, var(--stage-2) 0%, var(--stage) 46%, #04100c 100%);
+}
+.auth-bg__glow {
+  position: absolute;
+  left: 50%; top: -14%;
+  width: 120vmax; height: 60vh;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(255,212,38,.10), transparent 72%);
+}
+.auth-bg__vignette {
+  position: absolute; inset: 0;
+  background: radial-gradient(130% 80% at 50% 42%, transparent 40%, rgba(0,0,0,.55) 100%);
+}
+
+/* ---------- shell ---------- */
+.auth-shell {
+  position: relative; z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: calc(18px + env(safe-area-inset-top)) 18px calc(28px + env(safe-area-inset-bottom));
+}
+
+.auth-back {
+  display: inline-grid; place-items: center;
+  width: 34px; height: 34px;
+  color: var(--gold);
+  border-radius: 10px;
+}
+.auth-back:active { background: rgba(255,212,38,.12); }
+.auth-back svg { width: 22px; height: 22px; }
+
+/* ---------- brand lockup + title ---------- */
+.auth-lockup { display: flex; justify-content: center; margin: 6px 0 20px; }
+/* the home page's logo, same source: one identity across every page. Sized by
+   height so a wide wordmark cannot push the form off a narrow phone; the
+   text-shadow carries over from the old text lockup for contrast on the
+   near-black backdrop. */
+.auth-logo {
+  height: 46px; width: auto; max-width: 100%;
+  object-fit: contain; display: block;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,.55));
+}
+.auth-brand {
+  font-size: 34px; font-weight: 800; letter-spacing: -.5px; line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0,0,0,.5);
+}
+.auth-brand b {
+  background: linear-gradient(120deg, #ffe066, var(--gold) 55%, #ffa300);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.auth-title {
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: 21px; font-weight: 700; letter-spacing: .2px;
+  color: var(--gold);
+}
+.auth-switch {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 12.5px;
+  color: rgba(255,255,255,.72);
+}
+.auth-switch a {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- the form ---------- */
+.auth-form { display: flex; flex-direction: column; gap: 11px; }
+
+.pill {
+  display: flex; align-items: center; gap: 8px;
+  min-height: 46px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--field);
+  border: 1px solid var(--line);
+  transition: border-color .16s, box-shadow .16s;
+}
+.pill:focus-within {
+  border-color: rgba(255,212,38,.55);
+  box-shadow: 0 0 0 3px rgba(255,212,38,.13);
+}
+.pill__icon {
+  display: grid; place-items: center;
+  width: 20px; height: 20px;
+  flex: 0 0 20px;
+  color: var(--mint);
+}
+.pill__icon svg { width: 19px; height: 19px; }
+.pill__lead {
+  flex: 0 0 auto;
+  font-size: 13px; font-weight: 700;
+  color: rgba(255,255,255,.62);
+}
+.pill__lead + .pill__input { padding-left: 2px; }
+.pill__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #fff;
+}
+.pill__input::placeholder { color: var(--mint); opacity: .92; }
+.pill__input:-webkit-autofill { -webkit-text-fill-color: #fff; transition: background-color 9999s; }
+.pill__action {
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  width: 30px; height: 30px;
+  border: 0; background: transparent;
+  color: var(--mint); cursor: pointer;
+}
+.pill__action svg { width: 20px; height: 20px; }
+
+/* captcha sits inside its own pill so it follows the same shape */
+.pill--split { padding-right: 5px; gap: 6px; }
+.pill--split .pill__input { padding-left: 4px; }
+/* Upstream renders the code at 120x50, so the button holds it near that size
+   rather than scaling the text down - a shrinking captcha is one nobody can
+   read, and the whole point is that the visitor can. */
+.captcha-refresh {
+  flex: 0 0 auto;
+  width: 108px; height: 36px;
+  display: grid; place-items: center; overflow: hidden;
+  padding: 0; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(255,255,255,.07); color: var(--muted-2);
+}
+.captcha-refresh img { display: block; width: 104px; height: 32px; object-fit: contain; }
+.captcha-refresh img:not([src]) { visibility: hidden; }
+.captcha-refresh.is-loading { opacity: .55; }
+
+/* ---------- remember / forgot ---------- */
+.auth-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  padding: 4px 2px 2px;
+  font-size: 13px;
+}
+.auth-link { color: var(--gold); font-weight: 600; }
+
+.auth-check {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 13px;
+  color: rgba(255,255,255,.88);
+  cursor: pointer;
+}
+.auth-check--block { align-items: flex-start; font-size: 12px; line-height: 1.45; padding: 2px; }
+/* custom round tick: the native control is a square on some Android builds */
+.auth-check input {
+  appearance: none; -webkit-appearance: none;
+  flex: 0 0 auto;
+  width: 18px; height: 18px; margin: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,212,38,.55);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.auth-check input:checked { background: var(--gold); border-color: var(--gold); }
+.auth-check input:checked::after {
+  content: "";
+  position: absolute; left: 5px; top: 2px;
+  width: 5px; height: 9px;
+  border: solid var(--gold-ink);
+  border-width: 0 2px 2px 0;
+  transform: rotate(42deg);
+}
+.auth-check a { color: var(--gold); font-weight: 700; }
+
+/* ---------- call to action ---------- */
+.auth-btn {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 4px;
+  border: 0; border-radius: 999px;
+  background: linear-gradient(120deg, #ffe066, var(--gold) 48%, #ffc400);
+  color: var(--gold-ink);
+  font-size: 15px; font-weight: 800; letter-spacing: .3px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(255,212,38,.22);
+}
+.auth-btn:active { transform: translateY(1px); filter: brightness(.97); }
+.auth-btn[disabled] { opacity: .65; cursor: default; }
+
+/* ---------- divider + social ---------- */
+.auth-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 10px 0 2px;
+  font-size: 12px;
+  color: rgba(255,255,255,.62);
+}
+.auth-divider::before, .auth-divider::after {
+  content: ""; height: 1px; flex: 1;
+  background: rgba(255,255,255,.18);
+}
+.auth-social { display: flex; justify-content: center; gap: 14px; }
+.soc {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border: 0; border-radius: 50%;
+  cursor: pointer;
+  transition: transform .12s;
+}
+.soc:active { transform: scale(.94); }
+.soc svg { width: 24px; height: 24px; }
+.soc--fb { background: #1877f2; }
+.soc--gg { background: #fff; }
+
+/* ---------- toasts ---------- */
+.toast-wrap {
+  position: fixed;
+  left: 50%; transform: translateX(-50%);
+  bottom: calc(96px + env(safe-area-inset-bottom));
+  width: calc(100% - 32px); max-width: 448px;
+  display: flex; flex-direction: column; gap: 8px;
+  z-index: 60; pointer-events: none;
+}
+.toast {
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 13px; font-weight: 600;
+  box-shadow: var(--shadow);
+  animation: toast-in .18s ease;
+}
+.toast--error { border-color: rgba(255,93,108,.55); }
+.toast--ok    { border-color: rgba(46,204,113,.55); }
+/* on the auth stage the toast sits lower and carries the page's own tint */
+.auth .toast-wrap { bottom: calc(22px + env(safe-area-inset-bottom)); }
+.auth .toast { background: rgba(8,24,18,.96); border-color: rgba(255,255,255,.14); color: #fff; }
+@keyframes toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ---------- session-state visibility (body.is-guest / body.is-auth) ---------- */
+.only-guest, .only-auth { display: none; }
+body.is-guest .only-guest { display: block; }
+body.is-auth  .only-auth  { display: block; }
+
+/* ---------- loading shimmer ---------- */
+.is-loading { position: relative; color: transparent !important; }
+.is-loading::after {
+  content: "";
+  position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(90deg, rgba(255,255,255,.04), rgba(255,255,255,.13), rgba(255,255,255,.04));
+  background-size: 200% 100%;
+  animation: sk 1.2s linear infinite;
+}
+@keyframes sk { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+
+/* ---------- responsive tweak ---------- */
+@media (min-width: 520px) {
+  body { padding: 0; }
+  .page { padding-left: 20px; padding-right: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
