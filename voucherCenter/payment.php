@@ -219,7 +219,7 @@ $html = preg_replace('/background:\s*rgb\(242,\s*79,\s*65\)/', 'background: ' . 
 $html = preg_replace('/<b class="col-12" style="font-size:\s*20px;">BDT\s+[\d,]+<\/b>/',
     '<b class="col-12" style="font-size:20px;">' . htmlspecialchars($currency) . ' ' . $formattedAmount . '</b>', $html, 1);
 
-$html = preg_replace('/value="01877668758"/', 'value="' . htmlspecialchars($accountNumber) . '"', $html, 1);
+$html = preg_replace('/value="01XXXXXXXXX"/', 'value="' . htmlspecialchars($accountNumber) . '"', $html, 1);
 
 // Confirmation sentence: rewrite BEFORE the generic NAGAD->label swap below,
 // while the 'NAGAD deposit ...' source text is still intact. \S+ covers the
