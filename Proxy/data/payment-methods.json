@@ -7,8 +7,8 @@
             "logo": "/images/brand/mfs_bkash.svg?v=1791310122",
             "accounts": [
                 {
-                    "number": "01864679167",
-                    "name": "Demo Merchant",
+                    "number": "01XXXXXXXXX",
+                    "name": "Merchant Name",
                     "enabled": true,
                     "channels": [
                         {
@@ -28,8 +28,8 @@
             "logo": "/images/brand/mfs_bkashsm.svg?v=1791310333",
             "accounts": [
                 {
-                    "number": "01336710020",
-                    "name": "Demo Merchant SM",
+                    "number": "01XXXXXXXXX",
+                    "name": "Merchant Name 1",
                     "enabled": true,
                     "channels": [
                         {
@@ -47,8 +47,8 @@
                     ]
                 },
                 {
-                    "number": "01623450500",
-                    "name": "RRR1",
+                    "number": "01XXXXXXXXX",
+                    "name": "Merchant Name 2",
                     "enabled": true,
                     "channels": [
                         {
@@ -74,8 +74,8 @@
             "logo": "/images/brand/mfs_nagad.svg?v=1791310333",
             "accounts": [
                 {
-                    "number": "01817122660",
-                    "name": "Demo Merchant Nagad",
+                    "number": "01XXXXXXXXX",
+                    "name": "Merchant Name",
                     "enabled": true,
                     "channels": []
                 }
@@ -88,8 +88,8 @@
             "logo": "/images/brand/mfs_nagadsm.svg?v=1791310333",
             "accounts": [
                 {
-                    "number": "01336710020",
-                    "name": "Demo Merchant Nagad SM",
+                    "number": "01XXXXXXXXX",
+                    "name": "Merchant Name 1",
                     "enabled": true,
                     "channels": [
                         {
@@ -107,8 +107,8 @@
                     ]
                 },
                 {
-                    "number": "01625462967",
-                    "name": "RR2",
+                    "number": "01XXXXXXXXX",
+                    "name": "Merchant Name 2",
                     "enabled": true,
                     "channels": [
                         {
@@ -126,8 +126,8 @@
                     ]
                 },
                 {
-                    "number": "01628267040",
-                    "name": "hcdggh",
+                    "number": "01XXXXXXXXX",
+                    "name": "Merchant Name 3",
                     "enabled": true,
                     "channels": [
                         {
@@ -153,8 +153,8 @@
             "logo": "/images/brand/mfs_rocket.webp?v=1791310333",
             "accounts": [
                 {
-                    "number": "01996681890",
-                    "name": "Demo Merchant Rocket",
+                    "number": "01XXXXXXXXX",
+                    "name": "Merchant Name",
                     "enabled": true,
                     "channels": [
                         {
@@ -186,7 +186,7 @@
             "logo": "/images/brand/mfs_usdt.svg?v=1791310333",
             "accounts": [
                 {
-                    "number": "TN3VnM9xPz7kR4tY2wQbLcEhUaDfSgJm",
+                    "number": "TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
                     "name": "USDT Wallet",
                     "enabled": true,
                     "channels": [
